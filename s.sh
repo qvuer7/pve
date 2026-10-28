@@ -80,7 +80,7 @@ umount /mnt/data
 
 echo "--- attach /data (raw Lexar partition), the GPU, boot order"
 qm set $VMID --scsi1 "$LEXAR_PART",ssd=1,discard=on
-qm set $VMID --hostpci0 0000:01:00,pcie=1,x-vga=1
+qm set $VMID --hostpci0 0000:01:00,pcie=1    # GPU for compute; the virtual VGA stays the console
 qm set $VMID --boot order=scsi0
 qm config $VMID
 echo
