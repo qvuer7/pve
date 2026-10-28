@@ -1,5 +1,5 @@
 #!/bin/bash
-# Proxmox host steps for gpu-workstation -> pve. Run as root:  curl -sL https://raw.githubusercontent.com/qvuer7/pve/main/s.sh | bash
+# Proxmox host steps for gpu-workstation -> pve. Run as root:  curl -sL https://raw.githubusercontent.com/qvuer7/pve/master/s.sh | bash
 set -u
 LOG=/root/pve-steps.log; exec > >(tee -a "$LOG") 2>&1
 echo "=================== STEP 1: vfio for the RTX 5090  ($(date -Is))"
